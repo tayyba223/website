@@ -1,0 +1,316 @@
+/* 1. GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* 2. NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111827;
+}
+
+.logo {
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.navbar nav a:hover {
+    color: #38bdf8;
+}
+
+/* 3. HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #0f172a, #1e293b);
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.primary {
+    background: #38bdf8;
+    color: black;
+}
+
+.secondary {
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
+/* 4. SECTIONS GENERAL */
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.dark {
+    background: #1e293b;
+}
+
+/* 5. PORTFOLIO SECTION */
+.portfolio-section {
+    background: #ffffff;
+    color: #1e293b;
+    padding: 80px 8%;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.portfolio-left img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portfolio-left, .portfolio-right {
+    flex: 1;
+}
+
+.progress-item {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background: #f1f5f9; /* Changed to light gray for visibility on white bg */
+    height: 6px;
+    border-radius: 10px;
+}
+
+.progress {
+    height: 6px;
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+/* 6. SERVICES SECTION */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #334155;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* 7. TEAM SECTION (Cyber Theme) */
+#team {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-inner {
+    max-width: 1200px;
+    width: 90%;
+    text-align: center;
+}
+
+.section-tag {
+    color: #00d4ff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.section-title {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.section-title span {
+    color: #00d4ff;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background: #00d4ff;
+    margin: 20px auto 50px;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Card & Laser Effect */
+.team-card {
+    background: #161c2d;
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    position: relative; 
+    overflow: hidden; 
+    transition: all 0.4s ease;
+}
+
+.team-card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, rgba(56, 189, 248, 0.2), transparent);
+    pointer-events: none;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    border-color: #00d4ff;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.team-card:hover::before {
+    animation: scanLine 1.5s infinite linear;
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 32px;
+    color: #00d4ff;
+}
+
+.team-avatar i {
+    animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.team-role {
+    display: block;
+    font-size: 14px;
+    color: #00d4ff;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.team-info p {
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* 8. CONTACT FORM */
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #1e293b;
+    color: white;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 9. FOOTER */
+footer {
+    background: #111827;
+    padding: 40px 8%;
+    border-top: 1px solid #334155;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+/* 10. ANIMATIONS & RESPONSIVE */
+@keyframes scanLine {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1); filter: drop-shadow(0 0 2px #38bdf8); }
+    50% { transform: scale(1.1); filter: drop-shadow(0 0 10px #38bdf8); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 2px #38bdf8); }
+}
+
+@media(max-width:992px) {
+    .service-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-wrapper { flex-direction: column; }
+}
+
+@media(max-width:600px) {
+    .service-grid { grid-template-columns: 1fr; }
+    .navbar { flex-direction: column; gap: 10px; }
+    .hero h1 { font-size: 28px; }
+}
